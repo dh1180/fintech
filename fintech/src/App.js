@@ -1,15 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-
-const Welcome = (props) => {
-  console.log(props)
-  return <p>안녕하세요 {props.userAge}세 {props.userHeight} {props.userName}님 !</p>
-}
+import Welcome from "./components/Welcome"
+import InputComponents from './components/InputComponent';
 
 function App() {
   return (
     <div className="App">
       <Welcome userName="유관우" userAge={35} userHeight={175}></Welcome>
+      <InputComponents></InputComponents>
+    
     </div>
   );
 }
