@@ -1,16 +1,23 @@
 import {useState} from "react"
 
 const InputComponents = (props) => {
-  const value = "test"
+    // let value = "test"
     const [name, setName] = useState("test")
     const handleChangeInput = (event) => {
       console.log(event.target.value)
+      setName(event.target.value)
     }
+
+    const handleClickButton = () => {
+      alert(name)
+    }
+
+
     return (
       <>
       <p>{name}</p>
       <input onChange={handleChangeInput}></input>
-      <button>입력</button>
+      <button onClick={handleClickButton}>입력</button>
       </>
     )
 }
