@@ -1,24 +1,27 @@
-import './App.css';
-import Welcome from "./components/Welcome"
-import InputComponents from './components/InputComponent';
-import ListComponents from './components/ListComponents';
-import StyleldComponent from './components/StyleldComponent';
-import {BrowserRouter, Routes, Route} from "react-router-dom"
-import AxiosComponent from './components/AxiosComponent';
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NewsPage from "./pages/NewsPage";
+import IndexPage from "./pages/IndexPage";
+import AuthResultPage from "./pages/AuthResultPage";
+import MainPage from "./pages/MainPage";
+import BalancePage from "./pages/BalancePage";
+import QrCodePage from "./pages/QrCodePage";
+import QrReaderPage from "./pages/QrReaderPage";
 
 function App() {
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path='/' element={<Welcome />}></Route>
-      <Route path='/input' element={<InputComponents />}></Route>
-      <Route path='/list' element={<ListComponents />}></Route>
-      <Route path='/axios' element={<AxiosComponent />}></Route>
-    </Routes>
+      <Routes>
+        <Route path="/" element={<IndexPage />}></Route>
+        <Route path="/news" element={<NewsPage />}></Route>
+        <Route path="/authResult" element={<AuthResultPage />}></Route>
+        <Route path="/main" element={<MainPage />}></Route>
+        <Route path="/balance" element={<BalancePage />}></Route>
+        <Route path="/qrcode" element={<QrCodePage />}></Route>
+        <Route path="/qrreader" element={<QrReaderPage />}></Route>
+      </Routes>
     </BrowserRouter>
-
-
-  )
+  );
 }
 
 export default App;
